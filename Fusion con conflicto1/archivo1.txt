@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 archivo1 con modificación :D!!!!
 se agrega texto cualquiera
+=======
+ de rama3asdsa
+>>>>>>> conflicto3
