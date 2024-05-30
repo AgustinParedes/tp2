@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calcular Índice de Masa Corporal</h1>
+        <form id="Form">
+            <label for="peso">Peso en Kilogramos:</label>
+            <input type="number" id="peso" name="peso" required>
+
+            <label for="estatura">Estatura en Metro</label>
+            <input type="number" id="estatura" name="estatura required">
+
+            <button type="button" onclick="calcularIMC()">Calcular</button>
+        </form>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const peso = document.getElementById('peso').value;
+            const estatura = document.getElementById('estatura').value;
+
+            if (peso && estatura) {
+                const imc = peso / (estatura * estatura);
+                alert(`Tu IMC es ${imc.toFixed(2)}`);
+            } else {
+                alert('Por favor, ingrese valores válidos.');
+            }
+        }
+    </script>
+</body>
+</html>
