@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Calculadora de Area</h1>
+        <form id="calculardora">
+            <label for="ladoA">Lado A</label>
+            <input id="ladoA" type="number">
+
+            <label for="ladoB">Lado B</label>
+            <input id="ladoB" type="number">
+
+            <label for="ladoC">Lado C</label>
+            <input id="ladoC" type="number">
+
+            <button type="button" onclick="calcularArea()">Calcular Area</button>
+        </form>
+            <p id="resultado"></p>
+    </div>
+    
+    <script>
+        function calcularArea() {
+            const ladoA = document.getElementById("ladoA").value;
+            const ladoB = document.getElementById("ladoB").value;
+            const ladoC = document.getElementById("ladoC").value;
+
+            const resultado = document.getElementById("resultado");
+
+            if (ladoA > ladoC && ladoA > 0 && ladoB > 0 && ladoC > 0) {
+                
+                const trianguloloArea = (ladoB * (ladoA - ladoC)) /2;
+                const rectanguloArea = ladoB * ladoC;
+
+                const total = rectanguloArea + trianguloloArea;
+
+                resultado.style.color = "green";
+                resultado.textContent = `El area del terreno es: ${total}`
+
+            
+            } else {
+                resultado.style.color = "red";
+                resultado.textContent = "El ladoA tiene que ser mayor que ladoC. Tampoco puede ser 0"
+            } 
+        }
+
+
+    </script>
+</body>
+</html>
